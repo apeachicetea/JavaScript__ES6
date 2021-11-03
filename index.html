@@ -45,7 +45,29 @@
     let people1 = new Machine('Apeachicetea', 15);
     let people2 = new Machine('kim', 20);
 
-    
+    let parents = { name : 'kim' };
+    let children = {};
+    children.__proto__ = parents;
+    // console.log(children.name);
+
+    function Student(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+
+    Student.prototype.sayHi = function() {
+      console.log(this.name);
+    }
+
+    Student.prototype.sayHi1 = () => {
+      console.log(this);
+    }
+
+    let student1 = new Student('kim', 20);
+    let student2 = new Student('Park', 21);
+    let student3 = new Student('Lee', 20);
+
+
 
 
 
