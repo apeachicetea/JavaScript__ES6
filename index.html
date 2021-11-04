@@ -149,6 +149,55 @@
     let 아버지1 = new 아버지('만덕', '만득');
 
     
+    //함수를 만들어 object 데이터를 다루는 이유
+    //1.object 자료가 복잡할 때 이득
+    //2.object 자료 수정시 편리
+
+    //복잡한 소괄호 쓰기 싫다면 set/get을 사용
+    //set 데이터 변경하는 함수에
+    //get 데이터 꺼내쓰는 함수에
+
+    //set함수들(setter) 파라미터가 1개가 있어야 한다.
+    //get함수들(getter) return이 있어야 한다.
+    
+    let 사람 = {
+      name : 'Park',
+      age : 30,
+      get nextAge() {
+        return this.age + 1;
+      },
+      set setAge(a) {
+        return this.age = a; 
+      }
+    }
+
+    사람.nextAge;
+    //31
+    사람.setAge = 20;
+    //사람.age = 20;
+    
+
+    //class에서 사용하는 set/get
+    class 인간 {
+      constructor() {
+        this.name = 'Park';
+        this.age = 20;
+      }
+
+      get nextAge() {
+        return this.age + 1;
+      }
+
+      set setAge(a) {
+        this.age = a; 
+      }
+
+    }
+
+    let 인간1 = new 인간();
+
+
+
 
 
 
