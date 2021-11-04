@@ -197,9 +197,51 @@
     let 인간1 = new 인간();
 
 
+    // ---------Quiz----------
 
+    class 강아지 {
+      constructor(type, color) {
+        this.type = type;
+        this.color = color;
+      }
 
+      한살먹기() {
+        if(this instanceof 고양이) {
+          this.age = this.age + 1;
+        }
+      }
+    }
 
+    const 강아지1 = new 강아지('말티즈', 'white');
+    const 강아지2 = new 강아지('진돗개', 'brown');
+
+    class 고양이 extends 강아지 {
+      constructor(type, color, age) {
+        super(type, color);
+        this.age = age;
+      }
+    }
+
+    const 고양이1 = new 고양이('코숏', 'white', 5);
+    const 고양이2 = new 고양이('러시안블루', 'brown', 2);
+
+    let data = {
+      odd : [],
+      even : [],
+
+      stter(...a) {
+        a,forEach(fucntion())
+        if(a % 2 === 1) {
+          this.odd.push(a);
+        } else if(a % 2 === 0) {
+          this.even.push(a);
+        }
+      },
+
+      getter(a) {
+        return a.sort();
+      }
+    }
 
 
 
