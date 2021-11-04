@@ -69,6 +69,45 @@
 
 
 
+    
+    //상속기능을 구현하는 Class
+    //Constructor 만드는 신문법
+
+
+    //함수를 추가하고 싶다면
+    //1. constructor에 추가한다(instance 속성에 바로 적용됨.)
+    class 부모 {
+      constructor() {
+        this.name = 'Apeachicetea';
+        this.sayHey = function() {
+          console.log('공부 좀 해라!');
+        }
+      }      
+    }
+
+
+    let 아들 = new 부모();
+
+    //1. class 안에 추가한다(테슬라.prototype에 추가됨.)
+    //장점 : 모든 instance에 함수를 공유할 수 있다.
+    class 테슬라 {
+      constructor(a, b) {
+        this.model = a
+        this.since = b;
+      }
+      
+      buy() {
+        console.log('model3 사고 싶다!');
+      }
+
+      sell() {
+        console.log('model3 팔고 싶다!');
+      }
+    }
+
+    let model3 = new 테슬라('model3', 2021);
+    Object.getPrototypeOf(model3);
+
 
 
   </script>
